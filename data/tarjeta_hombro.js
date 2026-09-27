@@ -82,7 +82,7 @@ const SINDROMES = {
       'Gesto por encima de la cabeza que reproduce el síntoma mecánico → EVA',
       'Fuerza isométrica de RE y RI con dinamómetro si se dispone, siempre en la misma posición'],
     ['Rotura del manguito',
-      'Inspección: brazo en cabestrillo, escápula en rotación inferior o inclinación anterior, cabeza humeral anteriorizada. Cluster A: arco doloroso + drop arm + debilidad en RE → LR+ 15,6 con los tres positivos. Cluster B: edad >65 + debilidad en RE + dolor nocturno → LR+ 9,8 con los tres positivos.',
+      'Inspección: brazo en cabestrillo, escápula en rotación inferior o inclinación anterior, cabeza humeral anteriorizada. Cluster A: arco doloroso + drop arm + debilidad en RE → LR+ 15,6 con los tres positivos. Cluster B: edad ≥65 + debilidad en RE (± dolor nocturno) → LR+ 9,8 en la derivación, 5,0 en la validación.',
       'Elevación activa o arco doloroso → EVA',
       'Fuerza isométrica en RE con dinamómetro si se dispone (brazo junto al cuerpo, codo a 90°) o grados de elevación activa'],
     ['Hombro congelado',
@@ -90,7 +90,7 @@ const SINDROMES = {
       'Final del rango de RE pasiva → EVA (más útil cuando dolor > rigidez)',
       'RE pasiva en grados a 0° de abducción y RI a 90° de abducción (más útil cuando rigidez > dolor)']
   ],
-  nota: 'No usar en hombro congelado: test específicos de MR, labrum o AC — casi siempre salen positivos al tensar una cápsula sensibilizada. Los test AC por separado son débiles: Paxinos + O’Brien combinados dan S y E >90 % (Ampliar).'
+  nota: 'No usar en hombro congelado: test específicos de MR, labrum o AC — casi siempre salen positivos al tensar una cápsula sensibilizada. Los test AC por separado son débiles: Paxinos + gammagrafía ósea, los dos positivos, dan LR+ 55; los dos negativos, LR− 0,03 (Ampliar).'
 };
 
 // --- OPCIONAL: tabla orientativa. En hombro no reparte un bloque
