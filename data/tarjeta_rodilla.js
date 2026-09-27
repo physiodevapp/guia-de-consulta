@@ -82,7 +82,7 @@ const SINDROMES = {
   aviso: 'Antes de explorar: severidad e irritabilidad. Alta → solo bisagra y 1–2 tests; nada de sentadilla monopodal, step-down repetido, saltos ni flexión con sobrepresión. DERRAME (anexo): stroke test, barriendo la cara medial hacia el fondo de saco — 0 sin onda · traza · 1+ abombamiento · 2+ el líquido vuelve solo · 3+ no se desplaza. 2+ o 3+ → trátalo como irritabilidad alta. El peloteo solo detecta derrames grandes: negativo NO descarta. En fase aguda el grado del stroke test vale como ②: cambia rápido y no obliga a provocar dolor. Cronología: <2 h → hemartrosis (LCA, fractura osteocondral, luxación de rótula) · 6–24 h → menisco o reacción sinovial.',
   filas: [
     ['LCA',
-      'Confirmar: mecanismo de pivote + derrame inmediato + Lachman positivo → S 0,58 · E 0,95 · LR+ 17,5. Descartar: sin mecanismo de pivote ni chasquido + Lachman o pivot shift negativos → S 0,93 · E 0,87 · LR− 0,08.',
+      'Confirmar: mecanismo de pivote + derrame inmediato + Lachman positivo → S 0,82 · E 0,95 · LR+ 17,5. Descartar: sin mecanismo de pivote ni chasquido + Lachman o pivot shift negativos → S 0,93 · E 0,87 · LR− 0,08.',
       'Apoyo monopodal o bajada de un escalón → EVA. Si predomina la inestabilidad, anotar episodios de fallo por semana',
       'Déficit de extensión activa frente al lado sano, en supino con el talón sobre una toalla (grados)'],
     ['LCM',
