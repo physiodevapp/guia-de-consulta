@@ -22,18 +22,20 @@
 <style>
 :root{
   --bg:#F6F8F9; --panel:#FFFFFF; --band:#EEF3F5; --ink:#16262B; --muted:#4A6572; --line:#C9D1D6;
-  /* Una sola paleta para todas las regiones (la verde de hombro): no depende de CONFIG.DARK */
-  --accent:#1F5F4E; --on-accent:#FFFFFF; --focus:#0B5CAD;
+  /* Una sola paleta para todas las regiones (morado sobrio): no depende de CONFIG.DARK.
+     --focus se mantiene azul a propósito, independiente del acento: el foco de teclado
+     tiene que distinguirse siempre del color de marca, cambie este o no */
+  --accent:#5B3A77; --on-accent:#FFFFFF; --focus:#0B5CAD;
 }
 @media (prefers-color-scheme: dark){
   :root:not([data-theme="light"]){
     --bg:#0E1517; --panel:#162124; --band:#1D2B2F; --ink:#E7EEF0; --muted:#9DB4BD; --line:#2F4147;
-    --accent:#5CC0A3; --on-accent:#06231B; --focus:#7DB8F0;
+    --accent:#B98FD9; --on-accent:#2A1540; --focus:#7DB8F0;
   }
 }
 :root[data-theme="dark"]{
   --bg:#0E1517; --panel:#162124; --band:#1D2B2F; --ink:#E7EEF0; --muted:#9DB4BD; --line:#2F4147;
-  --accent:#5CC0A3; --on-accent:#06231B; --focus:#7DB8F0;
+  --accent:#B98FD9; --on-accent:#2A1540; --focus:#7DB8F0;
 }
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%}
