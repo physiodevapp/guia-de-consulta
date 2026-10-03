@@ -62,21 +62,30 @@ header.home{padding-left:14px}
 #regionCab[hidden]{display:none}
 /* Documentos (acceso permanente a formularios/ficha/guía rápida, tarea 10), Tema claro/oscuro
    (toggle manual sobre el automático del sistema) y Wake Lock (tarea 6, oculto por defecto,
-   visible solo si la API existe, ver JS): mismo botón redondo. El margin-left:auto que los
+   visible solo si la API existe, ver JS): mismo botón. El margin-left:auto que los
    alinea a la derecha vive en el contenedor .iconos, no en un botón: #documentos se oculta
    a sí mismo en su propia pantalla (como #pantalla sin Wake Lock), y si el margen viviera
    ahí, al ocultarse se perdía y el resto de iconos se quedaban pegados al título */
 .iconos{margin-left:auto;flex:none;display:flex;gap:4px}
-#documentos,#tema,#pantalla{appearance:none;flex:none;width:44px;height:44px;border:1px solid var(--line);
-  border-radius:50%;background:var(--panel);color:var(--muted);cursor:pointer;
+/* El propio <button> sigue siendo el objetivo táctil completo, 44×44 (decisión 5) e invisible
+   (sin borde ni fondo): lo que se ve es un "chip" más pequeño y cuadrado, no un círculo —
+   un ::before de 32×32 (inset:6px) con su propio borde/fondo, centrado dentro del botón.
+   Antes el círculo visible ERA el objetivo táctil; separarlos permite un aspecto más
+   compacto y "serio" (tarea 13, pedido por el usuario) sin reducir el área de toque real */
+#documentos,#tema,#pantalla{appearance:none;flex:none;width:44px;height:44px;border:0;
+  background:none;color:var(--muted);cursor:pointer;position:relative;
   display:grid;place-items:center}
+#documentos::before,#tema::before,#pantalla::before{content:"";position:absolute;inset:6px;
+  border:1px solid var(--line);border-radius:9px;background:var(--panel)}
+#documentos svg,#tema svg,#pantalla svg{position:relative;width:15px;height:15px}
 #documentos[hidden],#pantalla[hidden]{display:none}
-#tema[aria-pressed="true"],#pantalla[aria-pressed="true"]{background:var(--accent);color:var(--on-accent);border-color:var(--accent)}
+#tema[aria-pressed="true"],#pantalla[aria-pressed="true"]{color:var(--on-accent)}
+#tema[aria-pressed="true"]::before,#pantalla[aria-pressed="true"]::before{background:var(--accent);border-color:var(--accent)}
 /* Hover solo con ratón de verdad (no en táctil, donde un tap dejaría el estado "pegado"):
    pista visual en desktop de que el icono es interactivo, más el title con lo que hace/representa */
 @media (hover:hover) and (pointer:fine){
-  #documentos:hover,#tema:hover,#pantalla:hover{border-color:var(--muted)}
-  #tema[aria-pressed="true"]:hover,#pantalla[aria-pressed="true"]:hover{border-color:var(--on-accent)}
+  #documentos:hover::before,#tema:hover::before,#pantalla:hover::before{border-color:var(--muted)}
+  #tema[aria-pressed="true"]:hover::before,#pantalla[aria-pressed="true"]:hover::before{border-color:var(--on-accent)}
 }
 
 main{max-width:640px;margin:0 auto;padding:14px 14px 40px}
